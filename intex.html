@@ -2,18 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>HTML/JS FPS Engine</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="gameCanvas"></canvas>
-    <div id="instructions">
-        Click to Lock Mouse<br>
-        WASD to Move<br>
-        Mouse to Look<br>
-        Left Click to Shoot
+    <!-- New Device Selection Screen -->
+    <div id="device-selection">
+        <h1>How are you playing?</h1>
+        <button id="pc-button">PC (Mouse & Keyboard)</button>
+        <button id="mobile-button">Mobile (Touch Controls)</button>
     </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- The joystick will be created here by JavaScript -->
+    <div id="joystick-container" style="display: none;">
+        <div id="joystick-base">
+            <div id="joystick-stick"></div>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
